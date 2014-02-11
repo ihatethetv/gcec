@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35b3ceb6-a595-41a8-8184-712d628e7f93" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/bluemarine/style.css" afterPath="$PROJECT_DIR$/sites/all/themes/bluemarine/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="35b3ceb6-a595-41a8-8184-712d628e7f93" name="Default" comment="" />
     <ignored path="gcec.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="35b3ceb6-a595-41a8-8184-712d628e7f93" time="1392141143884" ignored="false" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="10" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.33333334">
+            <state line="101" column="10" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -40,34 +37,16 @@
       <file leaf-file-name="block.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/block.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="12" column="0" selection-start="414" selection-end="414" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="box.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/box.tpl.php">
+      <file leaf-file-name="aliases.drushrc.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$USER_HOME$/.drush/aliases.drushrc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/comment.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/node.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="6" column="33" selection-start="168" selection-end="168" vertical-scroll-proportion="0.17681728">
               <folding />
             </state>
           </provider>
@@ -77,15 +56,6 @@
         <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="266" selection-end="266" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -111,6 +81,7 @@
       <list>
         <option value="$PROJECT_DIR$/sites/all/themes/bluemarine/style-rtl.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/bluemarine/style.css" />
+        <option value="$USER_HOME$/.drush/aliases.drushrc.php" />
       </list>
     </option>
   </component>
@@ -408,51 +379,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/box.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/comment.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/node.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dropbox/_2011/hillview/website/2011_03_31-update/ckeditor/_samples/assets/_posteddata.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="266" selection-end="266" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
@@ -466,7 +395,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="10" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.33333334">
+        <state line="101" column="10" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="266" selection-end="266" vertical-scroll-proportion="-0.6113281">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/node.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/comment.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.2897196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/box.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="23" selection-start="43" selection-end="43" vertical-scroll-proportion="0.028037382">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/bluemarine/block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="414" selection-end="414" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.drush/aliases.drushrc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="33" selection-start="168" selection-end="168" vertical-scroll-proportion="0.17681728">
           <folding />
         </state>
       </provider>
