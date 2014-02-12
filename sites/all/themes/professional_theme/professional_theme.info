@@ -1,5 +1,5 @@
 name = Professional Theme
-description = Professional Theme is a responsive Drupal 7 theme. Please consider a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40devsaran%2ecom&lc=US&item_name=Donations%20to%20Professional%20Theme&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest" target="_blank">Small Donations</a>. <br/>Paypal ID : donation@devsaran.com. Developed by <a href="http://www.devsaran.com" target="_blank">devsaran.com</a>.
+description = Professional Theme is a responsive Drupal 7 theme. Developed by <a href="http://www.devsaran.com" target="_blank">Devsaran.com</a>.
 core = 7.x
 engine = phptemplate
 stylesheets[all][] = style.css
@@ -26,6 +26,7 @@ features[] = main_menu
 features[] = secondary_menu
 settings[breadcrumbs]  = 1
 settings[slideshow_display]  = 1
+settings[slideshow_all] = 0
 settings[slide1_head]  = "Sample product"
 settings[slide2_head]  = "Sample service"
 settings[slide3_head]  = "Sample product and service"
@@ -36,9 +37,9 @@ settings[slide1_url]  = "node/1"
 settings[slide2_url]  = "node/2"
 settings[slide3_url]  = "node/3"
 
-; Information added by drupal.org packaging script on 2013-09-02
-version = "7.x-1.9"
+; Information added by Drupal.org packaging script on 2014-01-07
+version = "7.x-2.02"
 core = "7.x"
 project = "professional_theme"
-datestamp = "1378144927"
+datestamp = "1389123212"
 

@@ -60,6 +60,22 @@ function professional_theme_preprocess_page(&$vars) {
   else {
     $vars['secondary_menu'] = FALSE;
   }
+  // Add javascript files for front-page jquery slideshow.
+  if (drupal_is_front_page() || theme_get_setting('slideshow_all')) {
+    $directory = drupal_get_path('theme', 'professional_theme');
+    drupal_add_js($directory . '/js/jquery.flexslider-min.js', array('group' => JS_THEME));
+    drupal_add_js($directory . '/js/slide.js', array('group' => JS_THEME));
+  }
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' =>  'viewport',
+      'content' =>  'width=device-width'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
 }
 
 /**
@@ -93,23 +109,4 @@ function professional_theme_preprocess_node(&$variables) {
   }
 }
 
-function professional_theme_page_alter($page) {
-  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  $viewport = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-    'name' =>  'viewport',
-    'content' =>  'width=device-width'
-    )
-  );
-  drupal_add_html_head($viewport, 'viewport');
-}
 
-/**
- * Add javascript files for front-page jquery slideshow.
- */
-if (drupal_is_front_page()) {
-  drupal_add_js(drupal_get_path('theme', 'professional_theme') . '/js/jquery.flexslider-min.js');
-  drupal_add_js(drupal_get_path('theme', 'professional_theme') . '/js/slide.js');
-}

@@ -68,59 +68,66 @@
 <div id="wrapper">
   <header id="header" role="banner">
     <?php if ($logo): ?><div id="logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>"/></a></div><?php endif; ?>
-    <h1 id="site-title"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
-    <div id="site-description"><?php print $site_slogan; ?></div>
+    <?php if ($site_name): ?><h1 id="site-title"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1><?php endif; ?>
+    <?php if ($site_slogan): ?><div id="site-description"><?php print $site_slogan; ?></div><?php endif; ?>
     <div class="clear"></div>
+	<?php 
+		/* Disable Main menu if unchecked */
+		if ($main_menu == TRUE): 
+	?>
     <nav id="main-menu"  role="navigation">
       <a class="nav-toggle" href="#"><?php print t("Navigation"); ?></a>
       <div class="menu-navigation-container">
-        <?php 
+        <?php
         if (module_exists('i18n_menu')) {
-          $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
+			$main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
         } else {
-          $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+			$main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
         }
-		/* Disable Main menu if unchecked */
-		if ($main_menu == TRUE):
 			print drupal_render($main_menu_tree);
-		endif;
-        ?>
+		?>
       </div>
       <div class="clear"></div>
-    </nav><!-- end main-menu -->
+    </nav>
+	<?php endif;?><!-- end main-menu -->
   </header>
 
-  
+
   <div id="container">
 
-		<?php if ($is_front || theme_get_setting('slideshow_all', 'professional_theme')): ?>
-			<?php if (theme_get_setting('slideshow_display', 'professional_theme')): ?>
+    <?php if ($is_front || theme_get_setting('slideshow_all')): ?>
+      <?php if (theme_get_setting('slideshow_display')): ?>
         <!-- Slides -->
-  <?php
-  $slide1_head = check_plain(theme_get_setting('slide1_head','professional_theme'));   
-  $slide1_desc = check_markup(theme_get_setting('slide1_desc','professional_theme'),'full_html'); 
-  $slide1_url = check_plain(theme_get_setting('slide1_url','professional_theme')); 
-  $slide1_img= check_markup(theme_get_setting('slide1_image_url','professional_theme')); 
-  $slide_alt = check_plain(theme_get_setting('slide_alt','professional_theme'));
-  
-  $slide2_head = check_plain(theme_get_setting('slide2_head','professional_theme'));   
-  $slide2_desc = check_markup(theme_get_setting('slide2_desc','professional_theme'), 'full_html'); 
-  $slide2_url = check_plain(theme_get_setting('slide2_url','professional_theme')); 
-  $slide2_img= check_markup(theme_get_setting('slide2_image_url','professional_theme')); 
-  $slide2_alt= check_plain(theme_get_setting('slide2_alt','professional_theme'));
-  
-  $slide3_head = check_plain(theme_get_setting('slide3_head','professional_theme'));   
-  $slide3_desc = check_markup(theme_get_setting('slide3_desc','professional_theme'), 'full_html'); 
-  $slide3_url = check_plain(theme_get_setting('slide3_url','professional_theme')); 
-  $slide3_img= check_markup(theme_get_setting('slide3_image_url','professional_theme')); 
-  $slide3_alt= check_plain(theme_get_setting('slide3_alt','professional_theme'));
+        <?php
+        $slide1_head = check_plain(theme_get_setting('slide1_head'));
+        $slide1_desc = filter_xss_admin(theme_get_setting('slide1_desc'));
+        $slide1_url = check_plain(theme_get_setting('slide1_url'));
+        $slide1_img = check_plain(theme_get_setting('slide1_image_url'));
+        $slide_alt = check_plain(theme_get_setting('slide_alt'));
 
-/*default values in case the alt text is not populated *****/
-   if($slide_alt  == "") {$slide_alt  = "slider image 1";}
-   if($slide2_alt == "") {$slide2_alt = "slider image 2";}
-   if($slide3_alt == "") {$slide3_alt = "slider image 3";}
-/*default values in case the alt text is not populated *****/
-?>
+        $slide2_head = check_plain(theme_get_setting('slide2_head'));
+        $slide2_desc = filter_xss_admin(theme_get_setting('slide2_desc'));
+        $slide2_url = check_plain(theme_get_setting('slide2_url'));
+        $slide2_img = check_plain(theme_get_setting('slide2_image_url'));
+        $slide2_alt = check_plain(theme_get_setting('slide2_alt'));
+
+        $slide3_head = check_plain(theme_get_setting('slide3_head'));
+        $slide3_desc = filter_xss_admin(theme_get_setting('slide3_desc'));
+        $slide3_url = check_plain(theme_get_setting('slide3_url'));
+        $slide3_img = check_plain(theme_get_setting('slide3_image_url'));
+        $slide3_alt = check_plain(theme_get_setting('slide3_alt'));
+
+        // Default values in case the alt text is not populated.
+        if ($slide_alt == ""):
+          $slide_alt = "slider image 1";
+        endif;
+        if ($slide2_alt == ""):
+          $slide2_alt = "slider image 2";
+        endif;
+        if ($slide3_alt == ""):
+          $slide3_alt = "slider image 3";
+        endif;
+        ?>
     <section id="slider">
     <ul class="slides">
       <li>
@@ -139,11 +146,11 @@
             <img src="<?php print $slide1_img; ?>" class="slide-image" alt="<?php print $slide_alt; ?>" /> </a>
             <?php } else { ?>
             <img src="<?php print base_path() . drupal_get_path('theme', 'professional_theme') . '/images/slide-image-1.jpg'; ?>" class="slide-image" alt="<?php print $slide_alt; ?>" /></a>
-        <?php } ?> 
+        <?php } ?>
 	<div class="clear"></div>
         </article>
       </li>
-      
+
       <li>
         <article class="post">
         <div class="entry-container">
@@ -160,11 +167,11 @@
             	<img src="<?php print $slide2_img; ?>" class="slide-image" alt="<?php print $slide2_alt; ?>" /> </a>
 		<?php } else { ?>
             <img src="<?php print base_path() . drupal_get_path('theme', 'professional_theme') . '/images/slide-image-2.jpg'; ?>" class="slide-image" alt="<?php print $slide2_alt; ?>"  /></a>
-        	<?php } ?> 
+        	<?php } ?>
 	<div class="clear"></div>
         </article>
       </li>
-      
+
       <li>
         <article class="post">
         <div class="entry-container">
@@ -189,8 +196,8 @@
     </section>
        <?php endif; ?>
     <?php endif; ?>
-  
-  
+
+
    <?php if ($page['header']): ?>
    <div id="head">
     <?php print render($page['header']); ?>
@@ -201,7 +208,7 @@
     <div class="content-sidebar-wrap">
 
     <div id="content">
-      <?php if (theme_get_setting('breadcrumbs', 'professional_theme')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
+      <?php if (theme_get_setting('breadcrumbs')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
       <section id="post-content" role="main">
         <?php print $messages; ?>
         <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
@@ -214,13 +221,13 @@
         <?php print render($page['content']); ?>
       </section> <!-- /#main -->
     </div>
-  
+
     <?php if ($page['sidebar_first']): ?>
       <aside id="sidebar-first" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
-  
+
     </div>
 
     <?php if ($page['sidebar_second']): ?>
@@ -228,20 +235,20 @@
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
-  
+
   <div class="clear"></div>
-   
+
   <?php if ($page['footer']): ?>
    <div id="foot">
      <?php print render($page['footer']) ?>
    </div>
    <?php endif; ?>
-  </div> 
-  
+  </div>
 
-   
+
+
   <div id="footer">
-    <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?> 
+    <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?>
       <div id="footer-area" class="clearfix">
         <?php if ($page['footer_first']): ?>
         <div class="column"><?php print render($page['footer_first']); ?></div>
@@ -254,16 +261,16 @@
         <?php endif; ?>
       </div>
     <?php endif; ?>
-      
+
     <div id="copyright">
     <!--Remove  -->
-     <?php if(!theme_get_setting('remove_copywrite','professional_theme')) {?>
-     	<p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print theme_get_setting('copywrite_holder','professional_theme') ?></p>
-     <?php } ?>
-     <!--Remove Theme Credit by Setting -->
-     <?php if(!theme_get_setting('display_theme_credit','professional_theme')) {?>  
-     		<p class="credits"> <?php print t('Theme Originally Created by'); ?>  <a href="http://www.devsaran.com">Devsaran</a></p>
-     <?php } ?>
+    <?php if (!theme_get_setting('remove_copywrite')): ?>
+      <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print theme_get_setting('copywrite_holder') ?></p>
+    <?php endif; ?>
+    <!--Remove Theme Credit by Setting -->
+    <?php if (!theme_get_setting('display_theme_credit')): ?>
+      <p class="credits"> <?php print t('Theme Originally Created by'); ?>  <a href="http://www.devsaran.com">Devsaran</a></p>
+    <?php endif; ?>
     <div class="clear"></div>
     </div>
   </div>
